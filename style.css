@@ -1,3 +1,47 @@
 body {
   font-family: sans-serif;
+  background-color: rgb(215, 215, 203);
+}
+
+h1 {
+  text-align: center;
+  font-family: monospace;
+  font-size: 4rem;
+}
+
+main {
+  background-color: beige;
+  max-width: 60rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.meal {
+  background-color: white;
+  border: 1px solid rgb(215, 215, 203);
+  border-radius: 5px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.meal:hover {
+  box-shadow: 5px 5px 12px -9px rgba(56, 56, 56, 0.42);
+}
+
+.dish {
+  font-size: 8rem;
+}
+
+button {
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 999rem;
+  border: none;
+  background-color: #d62a02;
+  color: beige;
+  width: 100%;
+  cursor: pointer;
 }
