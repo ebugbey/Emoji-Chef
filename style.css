@@ -25,10 +25,12 @@ main {
   border-radius: 5px;
   padding: 1rem;
   text-align: center;
+  transition: all 0.3s;
 }
 
 .meal:hover {
-  box-shadow: 5px 5px 12px -9px rgba(56, 56, 56, 0.42);
+  box-shadow: 5px 5px 12px rgba(56, 56, 56, 0.42);
+  transform: scale(1.02) translateY(-0.25rem);
 }
 
 .dish {
