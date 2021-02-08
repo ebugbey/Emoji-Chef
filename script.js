@@ -1,9 +1,23 @@
-const dish = document.querySelector(".dish");
+const buttons = document.querySelectorAll("button");
 
-const button = document.querySelector("button");
+const cook = (event) => {
+  const theButtonThatGotClicked = event.target;
+  const theClosestMeal = theButtonThatGotClicked.closest(".meal");
+  const theDishInside = theClosestMeal.querySelector(".dish");
+  const theEmojiToCook = theDishInside.textContent;
 
-const cook = () => {
-  dish.textContent = "🍳";
+  const cookedEmojis = {
+    "🐓": "🍗",
+    "🐄": "🍔",
+    "🥔": "🍟",
+    "🌽": "🍿",
+    "🥚": "🍳",
+    "🦐": "🍤",
+  };
+
+  theDishInside.textContent = cookedEmojis[theEmojiToCook];
+  theButtonThatGotClicked.disabled = true;
+  theButtonThatGotClicked.textContent = "Cooked!";
 };
 
-button.addEventListener("click", cook);
+buttons.forEach((button) => button.addEventListener("click", cook));
